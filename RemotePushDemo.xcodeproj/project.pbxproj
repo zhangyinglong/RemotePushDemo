@@ -1,0 +1,408 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		587F4DF4417DF8F4EA584F9C /* Pods_RemotePushDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F33CF29E22786E303315BC /* Pods_RemotePushDemo.framework */; };
+		FCEF52F41ED801A7003F7B7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEF52F31ED801A7003F7B7F /* AppDelegate.swift */; };
+		FCEF52F61ED801A7003F7B7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEF52F51ED801A7003F7B7F /* ViewController.swift */; };
+		FCEF52F91ED801A7003F7B7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCEF52F71ED801A7003F7B7F /* Main.storyboard */; };
+		FCEF52FB1ED801A7003F7B7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCEF52FA1ED801A7003F7B7F /* Assets.xcassets */; };
+		FCEF52FE1ED801A7003F7B7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCEF52FC1ED801A7003F7B7F /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		316F1635559F4440A5D66979 /* Pods-RemotePushDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemotePushDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RemotePushDemo/Pods-RemotePushDemo.release.xcconfig"; sourceTree = "<group>"; };
+		B3F33CF29E22786E303315BC /* Pods_RemotePushDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemotePushDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCEF52F01ED801A7003F7B7F /* RemotePushDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemotePushDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCEF52F31ED801A7003F7B7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FCEF52F51ED801A7003F7B7F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FCEF52F81ED801A7003F7B7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FCEF52FA1ED801A7003F7B7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FCEF52FD1ED801A7003F7B7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FCEF52FF1ED801A7003F7B7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCEF53051ED802ED003F7B7F /* RemotePushDemo-Bridge-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RemotePushDemo-Bridge-Header.h"; sourceTree = "<group>"; };
+		FCEF53061ED80F5B003F7B7F /* RemotePushDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RemotePushDemo.entitlements; sourceTree = "<group>"; };
+		FDF2A5B3D73B14ED747AA7E8 /* Pods-RemotePushDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemotePushDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RemotePushDemo/Pods-RemotePushDemo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FCEF52ED1ED801A7003F7B7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				587F4DF4417DF8F4EA584F9C /* Pods_RemotePushDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ADFE61C076EC349A5FEE6522 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FDF2A5B3D73B14ED747AA7E8 /* Pods-RemotePushDemo.debug.xcconfig */,
+				316F1635559F4440A5D66979 /* Pods-RemotePushDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D6147F5703F05348DDE60E72 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3F33CF29E22786E303315BC /* Pods_RemotePushDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FCEF52E71ED801A7003F7B7F = {
+			isa = PBXGroup;
+			children = (
+				FCEF52F21ED801A7003F7B7F /* RemotePushDemo */,
+				FCEF52F11ED801A7003F7B7F /* Products */,
+				ADFE61C076EC349A5FEE6522 /* Pods */,
+				D6147F5703F05348DDE60E72 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FCEF52F11ED801A7003F7B7F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FCEF52F01ED801A7003F7B7F /* RemotePushDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FCEF52F21ED801A7003F7B7F /* RemotePushDemo */ = {
+			isa = PBXGroup;
+			children = (
+				FCEF53061ED80F5B003F7B7F /* RemotePushDemo.entitlements */,
+				FCEF52F31ED801A7003F7B7F /* AppDelegate.swift */,
+				FCEF52F51ED801A7003F7B7F /* ViewController.swift */,
+				FCEF52F71ED801A7003F7B7F /* Main.storyboard */,
+				FCEF52FA1ED801A7003F7B7F /* Assets.xcassets */,
+				FCEF52FC1ED801A7003F7B7F /* LaunchScreen.storyboard */,
+				FCEF52FF1ED801A7003F7B7F /* Info.plist */,
+				FCEF53051ED802ED003F7B7F /* RemotePushDemo-Bridge-Header.h */,
+			);
+			path = RemotePushDemo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FCEF52EF1ED801A7003F7B7F /* RemotePushDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCEF53021ED801A7003F7B7F /* Build configuration list for PBXNativeTarget "RemotePushDemo" */;
+			buildPhases = (
+				69F35060DA193C79F0D67809 /* [CP] Check Pods Manifest.lock */,
+				FCEF52EC1ED801A7003F7B7F /* Sources */,
+				FCEF52ED1ED801A7003F7B7F /* Frameworks */,
+				FCEF52EE1ED801A7003F7B7F /* Resources */,
+				F5E6A3C493C094CA8B957287 /* [CP] Embed Pods Frameworks */,
+				E4052B28500C6188588F59B6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RemotePushDemo;
+			productName = RemotePushDemo;
+			productReference = FCEF52F01ED801A7003F7B7F /* RemotePushDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FCEF52E81ED801A7003F7B7F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "zhang yinglong";
+				TargetAttributes = {
+					FCEF52EF1ED801A7003F7B7F = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 57NQC2SA65;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = FCEF52EB1ED801A7003F7B7F /* Build configuration list for PBXProject "RemotePushDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FCEF52E71ED801A7003F7B7F;
+			productRefGroup = FCEF52F11ED801A7003F7B7F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FCEF52EF1ED801A7003F7B7F /* RemotePushDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FCEF52EE1ED801A7003F7B7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCEF52FE1ED801A7003F7B7F /* LaunchScreen.storyboard in Resources */,
+				FCEF52FB1ED801A7003F7B7F /* Assets.xcassets in Resources */,
+				FCEF52F91ED801A7003F7B7F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		69F35060DA193C79F0D67809 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E4052B28500C6188588F59B6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RemotePushDemo/Pods-RemotePushDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5E6A3C493C094CA8B957287 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RemotePushDemo/Pods-RemotePushDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FCEF52EC1ED801A7003F7B7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCEF52F61ED801A7003F7B7F /* ViewController.swift in Sources */,
+				FCEF52F41ED801A7003F7B7F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FCEF52F71ED801A7003F7B7F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCEF52F81ED801A7003F7B7F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FCEF52FC1ED801A7003F7B7F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCEF52FD1ED801A7003F7B7F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FCEF53001ED801A7003F7B7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "RemotePushDemo/RemotePushDemo-Bridge-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FCEF53011ED801A7003F7B7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "RemotePushDemo/RemotePushDemo-Bridge-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FCEF53031ED801A7003F7B7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDF2A5B3D73B14ED747AA7E8 /* Pods-RemotePushDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RemotePushDemo/RemotePushDemo.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 57NQC2SA65;
+				INFOPLIST_FILE = RemotePushDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = chat.meme.inke;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		FCEF53041ED801A7003F7B7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 316F1635559F4440A5D66979 /* Pods-RemotePushDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RemotePushDemo/RemotePushDemo.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 57NQC2SA65;
+				INFOPLIST_FILE = RemotePushDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = chat.meme.inke;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FCEF52EB1ED801A7003F7B7F /* Build configuration list for PBXProject "RemotePushDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCEF53001ED801A7003F7B7F /* Debug */,
+				FCEF53011ED801A7003F7B7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCEF53021ED801A7003F7B7F /* Build configuration list for PBXNativeTarget "RemotePushDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCEF53031ED801A7003F7B7F /* Debug */,
+				FCEF53041ED801A7003F7B7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FCEF52E81ED801A7003F7B7F /* Project object */;
+}
