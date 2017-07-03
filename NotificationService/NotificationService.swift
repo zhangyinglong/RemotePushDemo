@@ -29,7 +29,26 @@ class NotificationService: UNNotificationServiceExtension {
             }
             tracePush(msgId: msgid)
             
-            contentHandler(bestAttemptContent)
+            /**
+             添加多媒体附件
+             内置资源支持10MB以内图片，50M以内音视频
+             外链支持30秒内能下载完成的多媒体文件
+             */
+            if let imageURLString = bestAttemptContent.userInfo["image"] as? String, let URL = URL(string: imageURLString) {
+                downloadAndSave(url: URL) { localURL, contentType in
+                    if let localURL = localURL {
+                        do {
+                            let attachment = try UNNotificationAttachment(identifier: "image_downloaded", url: localURL, options: nil)
+                            bestAttemptContent.attachments = [attachment]
+                        } catch {
+                            print(error)
+                        }
+                    }
+                    contentHandler(bestAttemptContent)
+                }
+            } else {
+                contentHandler(bestAttemptContent)
+            }
         }
     }
     

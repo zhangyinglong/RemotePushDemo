@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let notificationHandler = NotificationHandler()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+        requestNotificationAuthorization()
         registerNotificationCategory()
         return true
     }
@@ -95,6 +96,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension AppDelegate {
+    
+    fileprivate func requestNotificationAuthorization() {
+        // iOS 10 support
+        if #available(iOS 10.0, *) {
+            let options: UNAuthorizationOptions = [.alert, .sound, .badge]
+            UNUserNotificationCenter.current().requestAuthorization(options: options) { granted, error in
+                if granted {
+                    // 用户允许进行通知
+                    UIApplication.shared.registerForRemoteNotifications()
+                }
+            }
+        }
+        // iOS 9 support
+        else if #available(iOS 9, *) {
+            let types: UIUserNotificationType = [.alert, .sound, .badge]
+            let settings = UIUserNotificationSettings(types: types, categories: nil)
+            UIApplication.shared.registerUserNotificationSettings(settings)
+            // ...其他操作
+            if UIApplication.shared.currentUserNotificationSettings?.types != [] {
+                // 用户允许进行通知
+                UIApplication.shared.registerForRemoteNotifications()
+            }
+        }
+        // iOS 8 support
+        else if #available(iOS 8, *) {
+            let types: UIUserNotificationType = [.alert, .sound, .badge]
+            let settings = UIUserNotificationSettings(types: types, categories: nil)
+            UIApplication.shared.registerUserNotificationSettings(settings)
+            // ...其他操作
+            if UIApplication.shared.currentUserNotificationSettings?.types != [] {
+                // 用户允许进行通知
+                UIApplication.shared.registerForRemoteNotifications()
+            }
+        } 
+        // iOS 7 support
+        else {
+            let types: UIRemoteNotificationType = [.badge, .sound, .alert]
+            UIApplication.shared.registerForRemoteNotifications(matching: types)
+        }
+    }
     
     @available(iOS 10.0, *)
     fileprivate func createiOS10Category() -> Set<UNNotificationCategory> {

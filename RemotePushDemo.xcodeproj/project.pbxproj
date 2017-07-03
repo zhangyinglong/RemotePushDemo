@@ -80,6 +80,7 @@
 		FCFAF1D71F09F68300D80215 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCFAF1DE1F09FF9100D80215 /* NotificationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 		FCFAF1E01F0A007700D80215 /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
+		FCFAF1E31F0A36DD00D80215 /* push.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = push.js; sourceTree = "<group>"; };
 		FDF2A5B3D73B14ED747AA7E8 /* Pods-RemotePushDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemotePushDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RemotePushDemo/Pods-RemotePushDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +134,7 @@
 		FCEF52E71ED801A7003F7B7F = {
 			isa = PBXGroup;
 			children = (
+				FCFAF1E21F0A36DD00D80215 /* apns */,
 				FCEF52F21ED801A7003F7B7F /* RemotePushDemo */,
 				FCFAF1BC1F09EA6200D80215 /* NotificationService */,
 				FCFAF1D11F09F68300D80215 /* NotificationContent */,
@@ -187,6 +189,14 @@
 				FCFAF1D71F09F68300D80215 /* Info.plist */,
 			);
 			path = NotificationContent;
+			sourceTree = "<group>";
+		};
+		FCFAF1E21F0A36DD00D80215 /* apns */ = {
+			isa = PBXGroup;
+			children = (
+				FCFAF1E31F0A36DD00D80215 /* push.js */,
+			);
+			path = apns;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

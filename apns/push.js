@@ -1,3 +1,7 @@
+/**
+ *  https://github.com/node-apn/node-apn
+ */
+
 var apn = require('apn');
 
 if (process.argv.length == 3) {
@@ -27,14 +31,17 @@ if (process.argv.length == 3) {
 	// Set app badge indicator
 	notification.badge = 1;
 
-	// Play ping.aiff sound when the notification is received
-	notification.sound = 'default';
-
-	// Display the following message (the actual notification text, supports emoji)
-	notification.alert = 'Hello World \u270C';
-
-	// Send any extra payload data with the notification which will be accessible to your app in didReceiveRemoteNotification
-	notification.payload = {id: 123};
+    // Play ping.aiff sound when the notification is received
+    notification.sound = 'default';
+    
+    //
+    notification.mutableContent = 1;
+    
+    // Display the following message (the actual notification text, supports emoji)
+    notification.alert = { 'title': 'Image Notification', 'body': 'Show me an image from web!' };
+    
+    // Send any extra payload data with the notification which will be accessible to your app in didReceiveRemoteNotification
+    notification.payload = { 'msgid': 100, 'image': 'https://onevcat.com/assets/images/background-cover.jpg' };
 
 	// Actually send the notification
 	apnProvider.send(notification, deviceToken).then(function(result) {  
