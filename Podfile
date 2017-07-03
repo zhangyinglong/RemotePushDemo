@@ -6,6 +6,5 @@ target 'RemotePushDemo' do
   use_frameworks!
 
   # Pods for RemotePushDemo
-  pod 'JPush'
 
 end

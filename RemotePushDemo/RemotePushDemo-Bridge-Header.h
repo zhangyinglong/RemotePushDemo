@@ -6,4 +6,4 @@
 //  Copyright © 2017年 zhang yinglong. All rights reserved.
 //
 
-#import <JPush/JPUSHService.h>
+#import <CommonCrypto/CommonCrypto.h>
