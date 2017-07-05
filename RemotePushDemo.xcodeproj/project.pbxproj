@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		587F4DF4417DF8F4EA584F9C /* Pods_RemotePushDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F33CF29E22786E303315BC /* Pods_RemotePushDemo.framework */; };
+		FCBAF85F1F0CB6C7006AFC29 /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBAF85E1F0CB6C7006AFC29 /* Speaker.swift */; };
+		FCBAF8621F0CC955006AFC29 /* background-cover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCBAF8611F0CC955006AFC29 /* background-cover.jpg */; };
+		FCBAF8631F0CDA64006AFC29 /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBAF85E1F0CB6C7006AFC29 /* Speaker.swift */; };
 		FCEF52F41ED801A7003F7B7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEF52F31ED801A7003F7B7F /* AppDelegate.swift */; };
 		FCEF52F61ED801A7003F7B7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEF52F51ED801A7003F7B7F /* ViewController.swift */; };
 		FCEF52F91ED801A7003F7B7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCEF52F71ED801A7003F7B7F /* Main.storyboard */; };
@@ -59,6 +62,8 @@
 /* Begin PBXFileReference section */
 		316F1635559F4440A5D66979 /* Pods-RemotePushDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemotePushDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RemotePushDemo/Pods-RemotePushDemo.release.xcconfig"; sourceTree = "<group>"; };
 		B3F33CF29E22786E303315BC /* Pods_RemotePushDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemotePushDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCBAF85E1F0CB6C7006AFC29 /* Speaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
+		FCBAF8611F0CC955006AFC29 /* background-cover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background-cover.jpg"; sourceTree = "<group>"; };
 		FCEF52F01ED801A7003F7B7F /* RemotePushDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemotePushDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCEF52F31ED801A7003F7B7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCEF52F51ED801A7003F7B7F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,7 +75,7 @@
 		FCEF53061ED80F5B003F7B7F /* RemotePushDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RemotePushDemo.entitlements; sourceTree = "<group>"; };
 		FCFAF1BB1F09EA6100D80215 /* NotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCFAF1BD1F09EA6200D80215 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
-		FCFAF1BF1F09EA6200D80215 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCFAF1BF1F09EA6200D80215 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../NotificationService/Info.plist; sourceTree = "<group>"; };
 		FCFAF1C71F09EDB400D80215 /* NotificationService.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NotificationService.entitlements; sourceTree = "<group>"; };
 		FCFAF1CC1F09F68200D80215 /* NotificationContent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationContent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCFAF1CD1F09F68300D80215 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
@@ -131,6 +136,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FCBAF8601F0CC955006AFC29 /* Res */ = {
+			isa = PBXGroup;
+			children = (
+				FCBAF8611F0CC955006AFC29 /* background-cover.jpg */,
+			);
+			path = Res;
+			sourceTree = "<group>";
+		};
 		FCEF52E71ED801A7003F7B7F = {
 			isa = PBXGroup;
 			children = (
@@ -157,11 +170,13 @@
 		FCEF52F21ED801A7003F7B7F /* RemotePushDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FCBAF8601F0CC955006AFC29 /* Res */,
 				FCEF53061ED80F5B003F7B7F /* RemotePushDemo.entitlements */,
 				FCEF52F31ED801A7003F7B7F /* AppDelegate.swift */,
 				FCEF52F51ED801A7003F7B7F /* ViewController.swift */,
 				FCFAF1DE1F09FF9100D80215 /* NotificationHandler.swift */,
 				FCFAF1E01F0A007700D80215 /* UIAlertControllerExtension.swift */,
+				FCBAF85E1F0CB6C7006AFC29 /* Speaker.swift */,
 				FCEF52F71ED801A7003F7B7F /* Main.storyboard */,
 				FCEF52FA1ED801A7003F7B7F /* Assets.xcassets */,
 				FCEF52FC1ED801A7003F7B7F /* LaunchScreen.storyboard */,
@@ -176,7 +191,6 @@
 			children = (
 				FCFAF1C71F09EDB400D80215 /* NotificationService.entitlements */,
 				FCFAF1BD1F09EA6200D80215 /* NotificationService.swift */,
-				FCFAF1BF1F09EA6200D80215 /* Info.plist */,
 			);
 			path = NotificationService;
 			sourceTree = "<group>";
@@ -184,6 +198,7 @@
 		FCFAF1D11F09F68300D80215 /* NotificationContent */ = {
 			isa = PBXGroup;
 			children = (
+				FCFAF1BF1F09EA6200D80215 /* Info.plist */,
 				FCFAF1D21F09F68300D80215 /* NotificationViewController.swift */,
 				FCFAF1D41F09F68300D80215 /* MainInterface.storyboard */,
 				FCFAF1D71F09F68300D80215 /* Info.plist */,
@@ -324,6 +339,7 @@
 				FCEF52FE1ED801A7003F7B7F /* LaunchScreen.storyboard in Resources */,
 				FCEF52FB1ED801A7003F7B7F /* Assets.xcassets in Resources */,
 				FCEF52F91ED801A7003F7B7F /* Main.storyboard in Resources */,
+				FCBAF8621F0CC955006AFC29 /* background-cover.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +418,7 @@
 			files = (
 				FCFAF1E11F0A007800D80215 /* UIAlertControllerExtension.swift in Sources */,
 				FCEF52F61ED801A7003F7B7F /* ViewController.swift in Sources */,
+				FCBAF85F1F0CB6C7006AFC29 /* Speaker.swift in Sources */,
 				FCFAF1DF1F09FF9100D80215 /* NotificationHandler.swift in Sources */,
 				FCEF52F41ED801A7003F7B7F /* AppDelegate.swift in Sources */,
 			);
@@ -411,6 +428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCBAF8631F0CDA64006AFC29 /* Speaker.swift in Sources */,
 				FCFAF1BE1F09EA6200D80215 /* NotificationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -694,6 +712,7 @@
 				FCFAF1DD1F09F68300D80215 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -61,6 +61,8 @@ enum CustomizeUICategoryAction: String {
 
 class NotificationHandler: NSObject, UNUserNotificationCenterDelegate {
     
+    fileprivate let speecher = Speaker()
+    
     // The method will be called on the delegate only if the application is in the foreground. If the method is not implemented or the handler is not called in a timely manner then the notification will not be presented. The application can choose to have the notification presented as a sound, badge, alert and/or in the notification list. This decision should be based on whether the information in the notification is otherwise visible to the user.
     @available(iOS 10.0, *)
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
@@ -96,6 +98,12 @@ class NotificationHandler: NSObject, UNUserNotificationCenterDelegate {
     // The method will be called on the delegate when the user responded to the notification by opening the application, dismissing the notification or choosing a UNNotificationAction. The delegate must be set before the application returns from applicationDidFinishLaunching:.
     @available(iOS 10.0, *)
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        if let speech = response.notification.request.content.userInfo["speech"] as? String {
+            speecher.speak(content: speech)
+        } else {
+            speecher.speak(content: "收到一个没有speech字段的通知")
+        }
         
         if let category = UserNotificationCategoryType(rawValue: response.notification.request.content.categoryIdentifier) {
             switch category {

@@ -9,6 +9,7 @@
 import UIKit
 import UserNotifications
 import MobileCoreServices
+import AVFoundation
 
 // https://developer.apple.com/documentation/usernotifications/unnotificationattachment
 
@@ -16,6 +17,7 @@ class NotificationService: UNNotificationServiceExtension {
 
     var contentHandler: ((UNNotificationContent) -> Void)?
     var bestAttemptContent: UNMutableNotificationContent?
+    fileprivate lazy var speecher = Speaker()
 
     override func didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void) {
         self.contentHandler = contentHandler
@@ -30,7 +32,7 @@ class NotificationService: UNNotificationServiceExtension {
             tracePush(msgId: msgid)
             
             /**
-             添加多媒体附件
+             添加多媒体附件(可支持多个附件，但UI只能显示一个所以没必要添加多个)
              内置资源支持10MB以内图片，50M以内音视频
              外链支持30秒内能下载完成的多媒体文件
              */
@@ -46,6 +48,32 @@ class NotificationService: UNNotificationServiceExtension {
                     }
                     contentHandler(bestAttemptContent)
                 }
+            } else if let voiceURLString = bestAttemptContent.userInfo["voice"] as? String, let URL = URL(string: voiceURLString) {
+                downloadAndSave(url: URL) { localURL, contentType in
+                    if let localURL = localURL {
+                        do {
+                            let attachment = try UNNotificationAttachment(identifier: "voice_downloaded", url: localURL, options: nil)
+                            bestAttemptContent.attachments = [attachment]
+                        } catch {
+                            print(error)
+                        }
+                    }
+                    contentHandler(bestAttemptContent)
+                }
+            } else if let videoURLString = bestAttemptContent.userInfo["video"] as? String, let URL = URL(string: videoURLString) {
+                downloadAndSave(url: URL) { localURL, contentType in
+                    if let localURL = localURL {
+                        do {
+                            let attachment = try UNNotificationAttachment(identifier: "video_downloaded", url: localURL, options: nil)
+                            bestAttemptContent.attachments = [attachment]
+                        } catch {
+                            print(error)
+                        }
+                    }
+                    contentHandler(bestAttemptContent)
+                }
+            } else if let speechString = bestAttemptContent.userInfo["speech"] as? String {
+                speecher.speak(content: speechString)
             } else {
                 contentHandler(bestAttemptContent)
             }
@@ -55,6 +83,7 @@ class NotificationService: UNNotificationServiceExtension {
     override func serviceExtensionTimeWillExpire() {
         // Called just before the extension will be terminated by the system.
         // Use this as an opportunity to deliver your "best attempt" at modified content, otherwise the original push payload will be used.
+
         if let contentHandler = contentHandler, let bestAttemptContent =  bestAttemptContent {
             contentHandler(bestAttemptContent)
         }
@@ -62,11 +91,8 @@ class NotificationService: UNNotificationServiceExtension {
 
 }
 
+// MARK -- 下载功能相关
 extension NotificationService {
-    
-    fileprivate func tracePush(msgId: Int) {
-        // 埋点上传
-    }
     
     fileprivate func downloadAndSave(url: URL, handler: @escaping (_ localURL: URL?, _ contentType: String?) -> Void) {
         let task = URLSession.shared.dataTask(with: url, completionHandler: {
@@ -173,6 +199,15 @@ extension NotificationService {
             result = key as String
         }
         return result
+    }
+    
+}
+
+// MARK -- 业务功能相关
+extension NotificationService {
+    
+    fileprivate func tracePush(msgId: Int) {
+        // 埋点上传
     }
     
 }
